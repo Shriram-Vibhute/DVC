@@ -1,5 +1,4 @@
 # Importing necessary libraries
-from venv import logger
 import pandas as pd
 import pathlib
 import re
