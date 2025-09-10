@@ -61,8 +61,9 @@ def train_vectorizer(train_df: pd.DataFrame, max_features: int, save_path: str) 
 def encoding_feature(df: pd.DataFrame, vectorizer: CountVectorizer) -> pd.DataFrame:
     # Transform the entire content column at once instead of applying row by row
     content_transformed = vectorizer.transform(df['content'].values)
+ 
     # Convert sparse matrix to dense array
-    df['content'] = [row.toarray().flatten() for row in content_transformed]
+    df = pd.concat(objs=[df, pd.DataFrame(content_transformed.toarray())], axis=1)
     return df
 
 # Save the dataset
