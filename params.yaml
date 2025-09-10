@@ -1,3 +1,6 @@
-make_dataset:
+data_ingestion:
   seed: 42
   test_size: 0.25
+
+feature_engineering:
+  max_features: 5000
