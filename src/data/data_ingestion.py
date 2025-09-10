@@ -64,7 +64,6 @@ def store_data(train_df: pd.DataFrame, test_df: pd.DataFrame, save_path: pathlib
     logger.debug(f"Saved train dataset to {train_path}")
     logger.debug(f"Saved test dataset to {test_path}")
 
-
 # Forming Logger
 def form_logger() -> logging.Logger:
     logger = logging.getLogger() # If no name is specified, return the root logger. Thats why we are accessing the logger through - logging.getLogger(__name__) in every function
@@ -88,7 +87,7 @@ def form_logger() -> logging.Logger:
 def main() -> None:
     # Forming Logger
     logger = form_logger()
-    logger.info("Starting data processing pipeline")
+    logger.info("Starting data loading and splitting pipeline")
 
     try:
         # Forming paths for loading and storing the dataset
