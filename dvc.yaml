@@ -36,6 +36,7 @@ stages:
     cmd: python src/models/train_model.py
     deps:
     - src/models/train_model.py
+    - data/features/train.csv
     - params.yaml
     outs:
     - models/models/bagging_classifier.joblib
@@ -44,3 +45,4 @@ stages:
     cmd: python src/models/evaluate_model.py
     deps:
     - models/models/bagging_classifier.joblib
+    - data/features/test.csv
