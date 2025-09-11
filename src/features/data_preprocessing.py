@@ -18,7 +18,7 @@ def load_data(data_dir: str) -> Tuple[pd.DataFrame, pd.DataFrame, Dict[str, str]
     # Forming file paths
     train_path = data_dir / "interim" / "train.csv"
     test_path = data_dir / "interim" / "test.csv"
-    chat_words = data_dir / "interim" / "chat_words_dictonary.json"
+    chat_words = data_dir / "external" / "chat_words_dictonary.json"
 
     logger.info(f"Loading dataset from {data_dir / "interim"}")
 
