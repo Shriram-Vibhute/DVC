@@ -14,13 +14,13 @@ def load_params(params_path: pathlib.Path) -> Dict[str, Any]:
     with open(file=params_path, mode='r') as f:
         params = yaml.safe_load(f)
         
-        # Check if 'make_dataset' key exists in params
-        if 'make_dataset' not in params:
-            logger.error("'make_dataset' section not found in parameters file")
-            raise KeyError("'make_dataset' section not found in parameters file")
+        # Check if 'data_ingestion' key exists in params
+        if 'data_ingestion' not in params:
+            logger.error("'data_ingestion' section not found in parameters file")
+            raise KeyError("'data_ingestion' section not found in parameters file")
         
-        logger.debug(f"Parameters loaded: {params['make_dataset']}")
-        return params['make_dataset']
+        logger.debug(f"Parameters loaded: {params['data_ingestion']}")
+        return params['data_ingestion']
 
 # Loading Dataset
 def load_data(data_dir: pathlib.Path) -> pd.DataFrame:
