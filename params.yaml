@@ -1,14 +1,14 @@
 data_ingestion:
   seed: 42
-  test_size: 0.2
+  test_size: 0.24
 
 feature_engineering:
   max_features: 5000
 
 model_training:
   estimator:
-    "criterion": "gini"
-    "splitter": "best"
+    criterion: "gini"
+    splitter: "best"
     max_depth: 10
     min_samples_split: 10
     min_samples_leaf: 5
